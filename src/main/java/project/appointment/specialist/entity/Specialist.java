@@ -12,7 +12,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import project.appointment.appointment.entity.Appointment;
 import project.appointment.client.entity.Status;
 import project.appointment.review.entity.Review;
-import project.appointment.role.entity.RoleName;
+import project.appointment.ENUM.Role;
 import project.appointment.security.AppUser;
 import project.appointment.service.entity.Service;
 import project.appointment.specialization.entity.Specialization;
@@ -20,16 +20,15 @@ import project.appointment.timeSlot.entity.TimeSlot;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @Table(name = "t_specialist")
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public class Specialist implements AppUser {
 
     @Id
@@ -42,7 +41,7 @@ public class Specialist implements AppUser {
     private String email;
 
     @NotBlank
-    @Size(min = 6, max = 20, message = "Password must be at least 6 characters")
+    @Size(min = 6, max = 100, message = "Password must be at least 6 characters")
     @Column(name = "password")
     private String password;
 
@@ -107,21 +106,38 @@ public class Specialist implements AppUser {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "client_roles")
-    private RoleName roleName;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private Role role=Role.SPECIALIST;
 
-    @OneToMany(mappedBy = "specialist")
+    @OneToMany(mappedBy = "specialist", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Appointment> appointments;
 
-    @OneToMany(mappedBy = "specialist", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "specialist", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "specialist", fetch = FetchType.LAZY)
-    private List<TimeSlot> timeSlots;
+    @OneToMany(mappedBy = "specialist", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
+    private List<TimeSlot> timeSlots = new ArrayList<>();
+
+    public Specialist(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, Set<Specialization> specializations, Set<Service> services, String description, Integer experience, String address, String phone, Status status, Role role) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.specializations = specializations;
+        this.services = services;
+        this.description = description;
+        this.experience = experience;
+        this.address = address;
+        this.phone = phone;
+        this.status = status;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_SPECIALIST"));
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+role.name()));
     }
 
     @Override
@@ -151,6 +167,6 @@ public class Specialist implements AppUser {
 
     @Override
     public String getRole() {
-        return "SPECIALIST";
+        return role.name();
     }
 }

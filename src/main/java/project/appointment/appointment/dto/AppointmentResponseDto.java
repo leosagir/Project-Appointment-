@@ -3,7 +3,7 @@ package project.appointment.appointment.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import project.appointment.appointment.entity.AppointmentStatus;
+import project.appointment.appointment.entity.Appointment;
 
 import java.time.LocalDateTime;
 
@@ -19,7 +19,7 @@ public class AppointmentResponseDto {
     private String specialistFirstName;
     private String specialistLastName;
     private LocalDateTime appointmentDate;
-    private AppointmentStatus appointmentStatus;
+    private Appointment.AppointmentStatus appointmentStatus;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

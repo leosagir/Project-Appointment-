@@ -22,9 +22,8 @@ public class Specialization {
     @Column(name = "specialization", unique = true)
     private String specialization;
 
+    @Column(name = "specialists")
     @ManyToMany(mappedBy = "specializations", fetch = FetchType.LAZY)
     private Set<Specialist> specialists;
 
-    @OneToMany(mappedBy = "specialization", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Service> services;
 }

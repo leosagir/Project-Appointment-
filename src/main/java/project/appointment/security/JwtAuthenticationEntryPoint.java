@@ -12,6 +12,17 @@ import java.io.IOException;
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
+        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+        response.setContentType("text/xml;charset=UTF-8");
+        response.getWriter().write("<error><message>Access Denied</message></error>");
     }
 }
+
+
+//@Component
+//public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
+//    @Override
+//    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
+//        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
+//    }
+//}

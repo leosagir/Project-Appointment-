@@ -10,7 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import project.appointment.client.entity.Status;
-import project.appointment.role.entity.RoleName;
+import project.appointment.ENUM.Role;
 import project.appointment.security.AppUser;
 
 import java.time.LocalDate;
@@ -23,6 +23,8 @@ import java.util.Collections;
 @Setter
 @NoArgsConstructor
 @Table(name = "t_admin")
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public class Administrator implements AppUser {
 
     @Id
@@ -35,7 +37,7 @@ public class Administrator implements AppUser {
     private String email;
 
     @NotBlank
-    @Size(min = 6, max = 20, message = "Password must be at least 6 characters")
+    @Size(min = 6, max = 100, message = "Password must be at least 6 characters")
     @Column(name = "password")
     private String password;
 
@@ -78,13 +80,25 @@ public class Administrator implements AppUser {
     @Column(name = "status")
     private Status status;
 
-    @Column(name = "client_roles")
+    @Column(name = "role")
     @Enumerated(EnumType.STRING)
-    private RoleName role;
+    private Role role=Role.ADMINISTRATOR;
+
+    public Administrator(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, String address, String phone, Status status, Role role) {
+        this.id = id;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.phone = phone;
+        this.status = status;
+        this.role = role;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+role.name()));
     }
 
     @Override
@@ -114,7 +128,7 @@ public class Administrator implements AppUser {
 
     @Override
     public String getRole() {
-        return "ADMIN";
+        return role.name();
     }
 }
 

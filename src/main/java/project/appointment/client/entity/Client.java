@@ -9,10 +9,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import project.appointment.ENUM.Role;
 import project.appointment.appointment.entity.Appointment;
 import project.appointment.notification.entity.Notification;
 import project.appointment.review.entity.Review;
-import project.appointment.role.entity.Role;
 import project.appointment.security.AppUser;
 
 import java.time.LocalDate;
@@ -20,7 +20,6 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Getter
@@ -41,7 +40,7 @@ public class Client implements AppUser {
     private String email;
 
     @NotBlank
-    @Size(min = 6, max = 20, message = "Password must be at least 6 characters")
+    @Size(min = 6, max = 100, message = "Password must be at least 6 characters")
     @Column(name = "password")
     private String password;
 
@@ -84,20 +83,21 @@ public class Client implements AppUser {
     @Column(name = "status")
     private Status status;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "client_roles",
-            joinColumns = @JoinColumn(name = "client_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role")
+    private Role role=Role.CLIENT;
+
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Appointment> appointments;
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+
+    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews;
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Notification> notifications;
 
 
-    public Client(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, String address, String phone, LocalDateTime createdAt, LocalDateTime updatedAt, Status status, Set<Role> roles) {
+    public Client(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, String address, String phone, Status status, Role role) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
@@ -105,15 +105,13 @@ public class Client implements AppUser {
         this.dateOfBirth = dateOfBirth;
         this.address = address;
         this.phone = phone;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
         this.status = Status.ACTIVE;
-        this.roles = roles;
+        this.role = role;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_CLIENT"));
+        return Collections.singletonList(new SimpleGrantedAuthority("ROLE_"+ role.name()));
     }
 
     @Override
@@ -143,6 +141,6 @@ public class Client implements AppUser {
 
     @Override
     public String getRole() {
-        return "CLIENT";
+        return role.name();
     }
 }

@@ -1,12 +1,15 @@
 package project.appointment.timeSlot.entity;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import project.appointment.appointment.entity.Appointment;
 import project.appointment.specialist.entity.Specialist;
 
 import java.time.LocalDateTime;
@@ -22,13 +25,13 @@ public class TimeSlot {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "specialist_id", referencedColumnName = "id")
     @NotNull
+    @ManyToOne
+    @JoinColumn(name = "specialist_id", nullable = false)
     private Specialist specialist;
 
     @NotNull
-    @Future
+    @FutureOrPresent
     @Column(name = "start_time", nullable = false)
     private LocalDateTime startTime;
 
@@ -37,8 +40,17 @@ public class TimeSlot {
     @Column(name = "end_time", nullable = false)
     private LocalDateTime endTime;
 
-    @NotNull
-    @Column(name = "is_available", nullable = false)
-    private Boolean isAvailable = true;
+    @ManyToOne
+    @JoinColumn(name = "appointment_id")
+    private Appointment appointment;
+
+   @Enumerated(EnumType.STRING)
+    @Column(name = "time_slot_status")
+    public TimeSlotStatus timeSlotStatus;
+
+    public enum TimeSlotStatus {
+        AVAILABLE,
+        BOOKED
+    }
 
 }
