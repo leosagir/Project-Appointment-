@@ -1,11 +1,12 @@
 package project.appointment.specialization.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import project.appointment.service.entity.Service;
 import project.appointment.specialist.entity.Specialist;
 
 import java.util.Set;
@@ -14,13 +15,16 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "t_specialization")
 public class Specialization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long specializationId;
+    private Long id;
 
-    @Column(name = "specialization", unique = true)
-    private String specialization;
+    @NotBlank(message = "Title is required")
+    @Size(min = 2, max = 100, message = "Title must be between 2 and 100 characters")
+    @Column(name = "title", unique = true)
+    private String title;
 
     @Column(name = "specialists")
     @ManyToMany(mappedBy = "specializations", fetch = FetchType.LAZY)

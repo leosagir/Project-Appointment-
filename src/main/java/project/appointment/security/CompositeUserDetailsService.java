@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import project.appointment.admin.repository.AdministratorRepository;
+import project.appointment.admin.repository.AdminRepository;
 import project.appointment.client.repository.ClientRepository;
 import project.appointment.specialist.repository.SpecialistRepository;
 
@@ -23,7 +23,7 @@ public class CompositeUserDetailsService implements UserDetailsService {
     private SpecialistRepository specialistRepository;
 
     @Autowired
-    private AdministratorRepository administratorRepository;
+    private AdminRepository administratorRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

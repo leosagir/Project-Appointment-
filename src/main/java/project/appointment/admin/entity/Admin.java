@@ -25,7 +25,7 @@ import java.util.Collections;
 @Table(name = "t_admin")
 @Inheritance(strategy = InheritanceType.JOINED)
 
-public class Administrator implements AppUser {
+public class Admin implements AppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -63,7 +63,8 @@ public class Administrator implements AppUser {
 
     @Column(name = "phone", length = 15)
     @Size(min=7,max = 15)
-    @Pattern(regexp = "^\\+?([0-9]{10}|[0-9]{3}[- .]?[0-9]{3}[- .]?[0-9]{4})$")
+    @Pattern(regexp = "^\\+?[0-9]{10,14}$",
+            message = "Phone number must be 10-14 digits long and may start with a '+' symbol")
     @NotBlank
     private String phone;
 
@@ -84,7 +85,7 @@ public class Administrator implements AppUser {
     @Enumerated(EnumType.STRING)
     private Role role=Role.ADMINISTRATOR;
 
-    public Administrator(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, String address, String phone, Status status, Role role) {
+    public Admin(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, String address, String phone, Status status, Role role) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;

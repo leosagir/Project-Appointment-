@@ -1,39 +1,23 @@
 package project.appointment.specialist.dto;
 
 import lombok.Data;
-import project.appointment.client.entity.Status;
-import project.appointment.timeSlot.entity.TimeSlot;
+import project.appointment.services.dto.SServiceResponseDto;
+import project.appointment.specialization.dto.SpecializationResponseDto;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Set;
 
 @Data
 public class SpecialistResponseDto {
-    private Long id;
 
-    private String email;
-
-    private String firstName;
-
-    private String lastName;
-
-    private String specialization;
-
-    private String description;
-
-    private Integer experience;
-
-    private LocalDate dateOfBirth;
-
-    private String address;
-
-    private String phone;
-
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
-
-    private Status status;
+        private Long id;
+        private String firstName;
+        private String lastName;
+        private Set<SpecializationResponseDto> specializations;
+        private Set<SServiceResponseDto> services;
+        private String description;
+        private LocalDate dateOfBirth;
+        private String address;
+        private String phone;
 
 }

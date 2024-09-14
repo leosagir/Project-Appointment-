@@ -66,7 +66,8 @@ public class Client implements AppUser {
 
     @Column(name = "phone", length = 15)
     @Size(min=7,max = 15)
-    @Pattern(regexp = "^\\+?([0-9]{10}|[0-9]{3}[- .]?[0-9]{3}[- .]?[0-9]{4})$")
+    @Pattern(regexp = "^\\+?[0-9]{10,14}$",
+            message = "Phone number must be 10-14 digits long and may start with a '+' symbol")
     @NotBlank
     private String phone;
 
@@ -142,5 +143,11 @@ public class Client implements AppUser {
     @Override
     public String getRole() {
         return role.name();
+    }
+
+    //метод для автоматической установки даты
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
     }
 }

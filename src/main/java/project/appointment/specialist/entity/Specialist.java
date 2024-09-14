@@ -14,9 +14,9 @@ import project.appointment.client.entity.Status;
 import project.appointment.review.entity.Review;
 import project.appointment.ENUM.Role;
 import project.appointment.security.AppUser;
-import project.appointment.service.entity.Service;
+import project.appointment.services.entity.SService;
 import project.appointment.specialization.entity.Specialization;
-import project.appointment.timeSlot.entity.TimeSlot;
+
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -37,27 +37,27 @@ public class Specialist implements AppUser {
 
     @Email
     @NotBlank
-    @Column(name = "email", unique = true)
+    @Column(name = "email", unique = true,nullable = false)
     private String email;
 
     @NotBlank
     @Size(min = 6, max = 100, message = "Password must be at least 6 characters")
-    @Column(name = "password")
+    @Column(name = "password",nullable = false)
     private String password;
 
     @NotBlank
     @Size(min = 2,max = 20)
-    @Column(name = "first_name", length = 20)
+    @Column(name = "first_name", length = 20,nullable = false)
     private String firstName;
 
     @NotBlank
-    @Column(name = "last_name", length = 20)
+    @Column(name = "last_name", length = 20,nullable = false)
     @Size(min = 2,max = 20)
     private String lastName;
 
     @NotNull
     @Past
-    @Column(name = "date_of_birth")
+    @Column(name = "date_of_birth",nullable = false)
     private LocalDate dateOfBirth;
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -69,45 +69,40 @@ public class Specialist implements AppUser {
     private Set<Specialization> specializations;
 
     @ManyToMany(mappedBy = "specialists")
-    private Set<Service> services;
+    private Set<SService> services;
 
     @Size(min = 3,max = 510)
-    @Column(name = "description", length = 510)
+    @Column(name = "description", length = 510,nullable = false)
     @NotBlank(message = "Description is required")
     private String description;
 
-    @Min(1)
-    @Max(50)
-    @Column(name = "experience")
-    @NotNull(message = "Experience is required")
-    private Integer experience;
-
     @NotBlank
     @Size(max=255)
-    @Column(name = "address", length = 255)
+    @Column(name = "address", length = 255,nullable = false)
     private String address;
 
-    @Column(name = "phone", length = 15)
+    @Column(name = "phone", length = 15,nullable = false)
     @Size(min=7,max = 15)
-    @Pattern(regexp = "^\\+?([0-9]{10}|[0-9]{3}[- .]?[0-9]{3}[- .]?[0-9]{4})$")
+    @Pattern(regexp = "^\\+?[0-9]{10,14}$",
+            message = "Phone number must be 10-14 digits long and may start with a '+' symbol")
     @NotBlank
     private String phone;
 
     @NotNull
     @CreationTimestamp
-    @Column(name = "created_at")
+    @Column(name = "created_at",nullable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
-    @Column(name = "updated_at")
+    @Column(name = "updated_at",nullable = false)
     private LocalDateTime updatedAt;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
+    @Column(name = "status",nullable = false)
     private Status status;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role")
+    @Column(name = "role",nullable = false)
     private Role role=Role.SPECIALIST;
 
     @OneToMany(mappedBy = "specialist", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -116,10 +111,8 @@ public class Specialist implements AppUser {
     @OneToMany(mappedBy = "specialist", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "specialist", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
-    private List<TimeSlot> timeSlots = new ArrayList<>();
 
-    public Specialist(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, Set<Specialization> specializations, Set<Service> services, String description, Integer experience, String address, String phone, Status status, Role role) {
+    public Specialist(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, Set<Specialization> specializations, Set<SService> services, String description, String address, String phone, Status status, Role role) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
@@ -128,7 +121,6 @@ public class Specialist implements AppUser {
         this.specializations = specializations;
         this.services = services;
         this.description = description;
-        this.experience = experience;
         this.address = address;
         this.phone = phone;
         this.status = status;

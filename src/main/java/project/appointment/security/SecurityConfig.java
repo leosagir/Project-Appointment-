@@ -3,6 +3,7 @@ package project.appointment.security;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -38,10 +39,12 @@ public class SecurityConfig {
         http
                 .csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                        .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/specialist/**").hasAnyRole("SPECIALIST", "ADMIN")
-                        .requestMatchers("/api/client/**").hasAnyRole("CLIENT", "ADMIN")
+                        .requestMatchers("/api/admin/**").hasRole("ADMINISTRATOR")
+                        .requestMatchers(HttpMethod.PATCH, "/api/admin/**").hasRole("ADMINISTRATOR")
+                        .requestMatchers("/api/specialists/**").hasAnyRole("SPECIALIST", "ADMINISTRATOR")
+                        .requestMatchers("/api/clients/**").hasAnyRole("CLIENT", "ADMINISTRATOR")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManagement ->

@@ -1,105 +1,115 @@
 package project.appointment.client.service;
 
 import jakarta.transaction.Transactional;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.modelmapper.ModelMapper;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import project.appointment.ENUM.Role;
+import project.appointment.client.dto.ClientRequestDto;
+import project.appointment.client.dto.ClientResponseDto;
+import project.appointment.client.dto.ClientUpdateDto;
 import project.appointment.client.entity.Client;
-import project.appointment.client.exception.ClientNotFoundException;
+import project.appointment.client.entity.Status;
+import project.appointment.client.exception.EmailAlreadyExistsException;
+import project.appointment.client.exception.RegistrationException;
+import project.appointment.client.exception.ResourceNotFoundException;
 import project.appointment.client.repository.ClientRepository;
-import java.util.List;
-import java.util.Optional;
+
+import java.time.LocalDateTime;
+
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
 public class ClientServiceImpl implements ClientService {
 
     private final ClientRepository clientRepository;
-
+    private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
+    private final Validator validator;
+
 
     @Override
-    public List<Client> getAllClient() {
-        return clientRepository.findAll();
+    @Transactional
+    public ClientResponseDto registerClient(ClientRequestDto clientRequestDto) {
+        if (clientRequestDto == null) {
+            throw new IllegalArgumentException("ClientRequestDto must not be null");
+        }
+
+        validateClientRequest(clientRequestDto);
+
+        if (clientRepository.existsByEmail(clientRequestDto.getEmail())) {
+            throw new EmailAlreadyExistsException("Email already registered");
+        }
+
+        Client client = modelMapper.map(clientRequestDto, Client.class);
+        client.setPassword(passwordEncoder.encode(clientRequestDto.getPassword()));
+        client.setCreatedAt(LocalDateTime.now());
+        client.setRole(Role.CLIENT);
+        client.setStatus(Status.ACTIVE);
+
+        try {
+            Client savedClient = clientRepository.save(client);
+            return modelMapper.map(savedClient, ClientResponseDto.class);
+        } catch (DataIntegrityViolationException e) {
+            throw new RegistrationException("Error during client registration", e);
+        }
     }
 
     @Override
-    public Client getClientById(Long id) {
-        return clientRepository.findById(id).orElseThrow(()-> new ClientNotFoundException("Client with id" + id + " not found"));
-    }
-
-    @Override
-    public List<Client> getClientByLastNameFirstName(String lastName, String firstName) {
-        return clientRepository.findByLastNameAndFirstName(lastName,firstName);
+    public ClientResponseDto updateClient(Long id, ClientUpdateDto updateDto) {
+        Client client = clientRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Client with id " + id + " not found"));
+        if (updateDto.getFirstName() != null) {
+            client.setFirstName(updateDto.getFirstName());
+        }
+        if (updateDto.getLastName() != null) {
+            client.setLastName(updateDto.getLastName());
+        }
+        if (updateDto.getDateOfBirth() != null) {
+            client.setDateOfBirth(updateDto.getDateOfBirth());
+        }
+        if (updateDto.getAddress() != null) {
+            client.setAddress(updateDto.getAddress());
+        }
+        if (updateDto.getPhone() != null) {
+            client.setPhone(updateDto.getPhone());
+        }
+        Client updatedClient = clientRepository.save(client);
+        return modelMapper.map(updatedClient, ClientResponseDto.class);
     }
 
     @Override
     @Transactional
-    public Client saveClient(@Valid @NotNull Client client) {
-        try{
-            return clientRepository.save(client);
-        }catch (Exception e){
-            throw new RuntimeException("Failed to save user", e);
+    public ClientResponseDto deactivateClient(Long id) {
+        Client client = clientRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Client with id " + id + " not found"));
+
+        if (client.getStatus() == Status.INACTIVE) {
+            throw new IllegalStateException("Client is already inactive");
         }
+
+        client.setStatus(Status.INACTIVE);
+
+        Client updatedClient = clientRepository.save(client);
+        return modelMapper.map(updatedClient, ClientResponseDto.class);
     }
 
-    @Override
-    public Client deleteClient(Long id) {
-        return clientRepository.findById(id)
-                .map(user->{
-                    clientRepository.delete(user);
-                    return user;
-                })
-                .orElseThrow(()-> new ClientNotFoundException("Client with id" + id + " not found"));
-    }
 
-    @Override
-    @Transactional
-    public Client updateClient(Client client) {
-        Client updateUser=clientRepository.findById(client.getId())
-                .orElseThrow(()->new ClientNotFoundException("User with id" + client.getId() + " not found"));
-
-        updateUser.setPassword(client.getPassword());
-        updateUser.setEmail(client.getEmail());
-        updateUser.setFirstName(client.getFirstName());
-        updateUser.setLastName(client.getLastName());
-        updateUser.setPhone(client.getPhone());
-
-        updateUser.setStatus(client.getStatus());
-        updateUser.setReviews(client.getReviews());
-        updateUser.setAppointments(client.getAppointments());
-        updateUser.setNotifications(client.getNotifications());
-        return clientRepository.save(updateUser);
-    }
-
-        public Client save(Client client) {
-            client.setPassword(passwordEncoder.encode(client.getPassword()));
-            return clientRepository.save(client);
-        }
-
-        public Optional<Client> findByEmail(String email) {
-            return clientRepository.findByEmail(email);
-        }
-
-        public Boolean existsByEmail(String email) {
-            return clientRepository.existsByEmail(email);
-        }
-
-        public List<Client> findAll() {
-            return clientRepository.findAll();
-        }
-
-        public Optional<Client> findById(Long id) {
-            return clientRepository.findById(id);
-        }
-
-        public void deleteById(Long id) {
-            clientRepository.deleteById(id);
+    private void validateClientRequest(ClientRequestDto clientRequestDto) {
+        Set<ConstraintViolation<ClientRequestDto>> violations = validator.validate(clientRequestDto);
+        if (!violations.isEmpty()) {
+            throw new ConstraintViolationException(violations);
         }
     }
+}
+
+
 
 
 

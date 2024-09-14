@@ -1,5 +1,7 @@
 package project.appointment.specialist.repository;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import project.appointment.client.entity.Client;
@@ -9,5 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface SpecialistRepository extends JpaRepository<Specialist, Long> {
+    Boolean existsByEmail(String email);
     Optional<Specialist> findByEmail(String email);
+
 }

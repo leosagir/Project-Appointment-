@@ -1,4 +1,4 @@
-package project.appointment.service.entity;
+package project.appointment.services.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -10,10 +10,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import project.appointment.specialist.entity.Specialist;
 import project.appointment.specialization.entity.Specialization;
-import project.appointment.timeSlot.entity.TimeSlot;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -22,7 +20,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "t_service")
-public class Service {
+public class SService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
