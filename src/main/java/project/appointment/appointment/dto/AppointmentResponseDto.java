@@ -1,5 +1,6 @@
 package project.appointment.appointment.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +19,12 @@ public class AppointmentResponseDto {
     private Long specialistId;
     private String specialistFirstName;
     private String specialistLastName;
+    @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
     private LocalDateTime appointmentDate;
     private Appointment.AppointmentStatus appointmentStatus;
+    @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
     private LocalDateTime createdAt;
+    @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
     private LocalDateTime updatedAt;
 
 }

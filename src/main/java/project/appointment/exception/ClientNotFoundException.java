@@ -1,4 +1,4 @@
-package project.appointment.client.exception;
+package project.appointment.exception;
 
 public class ClientNotFoundException extends RuntimeException {
     public ClientNotFoundException(String message) {

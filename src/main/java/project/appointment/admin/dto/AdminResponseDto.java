@@ -1,5 +1,6 @@
 package project.appointment.admin.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 import project.appointment.client.entity.Status;
@@ -22,9 +23,9 @@ public class AdminResponseDto {
     private String address;
 
     private String phone;
-
+    @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
     private LocalDateTime createdAt;
-
+    @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
     private LocalDateTime updatedAt;
 
     private Status status;

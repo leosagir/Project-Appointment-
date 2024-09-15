@@ -1,5 +1,6 @@
 package project.appointment.appointment.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -17,6 +18,7 @@ public class AppointmentRequestDto {
 
         @NotNull(message = "Appointment date is required")
         @Future(message = "Appointment date must be in the future")
+        @JsonFormat(pattern = "dd MMMM yyyy HH:mm", timezone = "UTC")
         private LocalDateTime appointmentDate;
 
 }

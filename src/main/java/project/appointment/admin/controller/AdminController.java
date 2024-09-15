@@ -29,6 +29,7 @@ import project.appointment.specialization.service.SpecializationServiceImpl;
 
 @RestController
 @RequiredArgsConstructor
+@PreAuthorize("hasRole('ADMINISTRATOR')")
 @RequestMapping("/api/admin")
 public class AdminController {
     private final ClientServiceImpl clientServiceImpl;

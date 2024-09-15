@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
-import project.appointment.client.exception.ResourceNotFoundException;
+import project.appointment.exception.ResourceNotFoundException;
 import project.appointment.specialist.entity.Specialist;
 import project.appointment.specialist.repository.SpecialistRepository;
 import project.appointment.specialization.dto.SpecializationRequestDto;

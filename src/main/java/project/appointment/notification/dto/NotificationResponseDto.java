@@ -14,5 +14,6 @@ public class NotificationResponseDto {
     private LocalDateTime appointmentDate;
     private String message;
     private LocalDateTime sentAt;
-    private NotificationStatus notificationStatus;
+    private NotificationStatus status;
+
 }

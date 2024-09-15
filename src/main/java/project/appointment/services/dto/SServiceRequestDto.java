@@ -24,10 +24,11 @@ public class SServiceRequestDto {
     private Integer duration;
 
     @NotBlank(message = "Price is required")
+    @Pattern(regexp = "^\\d+(\\.\\d{1,2})?$", message = "Price must be a valid number with up to 2 decimal places")
     private String price;
 
-    private Set<SpecialistResponseDto> specialists;
+    private Set<Long> specialistId;
 
 
-    private SpecializationResponseDto specialization;
+    private Long specializationId;
 }

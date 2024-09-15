@@ -15,9 +15,9 @@ import project.appointment.client.dto.ClientResponseDto;
 import project.appointment.client.dto.ClientUpdateDto;
 import project.appointment.client.entity.Client;
 import project.appointment.client.entity.Status;
-import project.appointment.client.exception.EmailAlreadyExistsException;
-import project.appointment.client.exception.RegistrationException;
-import project.appointment.client.exception.ResourceNotFoundException;
+import project.appointment.exception.EmailAlreadyExistsException;
+import project.appointment.exception.RegistrationException;
+import project.appointment.exception.ResourceNotFoundException;
 import project.appointment.client.repository.ClientRepository;
 
 import java.time.LocalDateTime;

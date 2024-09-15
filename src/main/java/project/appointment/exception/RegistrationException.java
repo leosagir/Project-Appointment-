@@ -1,4 +1,4 @@
-package project.appointment.client.exception;
+package project.appointment.exception;
 
 public class RegistrationException extends RuntimeException {
   public RegistrationException(String message) {

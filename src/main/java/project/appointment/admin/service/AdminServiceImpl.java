@@ -15,12 +15,10 @@ import project.appointment.admin.dto.AdminResponseDto;
 import project.appointment.admin.dto.AdminUpdateDto;
 import project.appointment.admin.entity.Admin;
 import project.appointment.admin.repository.AdminRepository;
-import project.appointment.client.dto.ClientResponseDto;
-import project.appointment.client.entity.Client;
 import project.appointment.client.entity.Status;
-import project.appointment.client.exception.EmailAlreadyExistsException;
-import project.appointment.client.exception.RegistrationException;
-import project.appointment.client.exception.ResourceNotFoundException;
+import project.appointment.exception.EmailAlreadyExistsException;
+import project.appointment.exception.RegistrationException;
+import project.appointment.exception.ResourceNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.Set;

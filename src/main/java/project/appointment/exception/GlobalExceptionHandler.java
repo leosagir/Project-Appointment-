@@ -1,4 +1,4 @@
-package project.appointment.client.exception;
+package project.appointment.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.validation.FieldError;
 
+import javax.management.ServiceNotFoundException;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
@@ -18,6 +19,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleAccessDeniedException(AccessDeniedException e) {
         String xmlResponse = "<error><message>Access Denied</message></error>";
         return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                .contentType(MediaType.APPLICATION_XML)
+                .body(xmlResponse);
+    }
+
+    @ExceptionHandler({ServiceNotFoundException.class, SpecializationNotFoundException.class, SpecialistNotFoundException.class})
+    public ResponseEntity<String> handleNotFoundException(RuntimeException ex) {
+        String xmlResponse = "<error><message>" + ex.getMessage() + "</message></error>";
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .contentType(MediaType.APPLICATION_XML)
                 .body(xmlResponse);
     }

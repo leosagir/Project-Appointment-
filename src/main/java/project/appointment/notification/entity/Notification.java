@@ -42,7 +42,6 @@ public class Notification {
     private LocalDateTime sentAt;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "notifications_status", nullable = false)
-    private NotificationStatus notificationStatus;
-
+    @Column(name = "status", nullable = false)
+    private NotificationStatus status;
 }
