@@ -31,6 +31,13 @@ public class GlobalExceptionHandler {
                 .body(xmlResponse);
     }
 
+    @ExceptionHandler(UnauthorizedAccessException.class)
+    public ResponseEntity<String> handleUnauthorizedAccessException(UnauthorizedAccessException e) {
+        return ResponseEntity
+                .status(HttpStatus.FORBIDDEN)
+                .body(e.getMessage());
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException ex) {
         String errors = ex.getBindingResult().getAllErrors().stream()

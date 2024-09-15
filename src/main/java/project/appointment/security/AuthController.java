@@ -1,5 +1,6 @@
 package project.appointment.security;
 
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,10 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
-
     @Autowired
     private AuthenticationManager authenticationManager;
-
     @Autowired
     private UserDetailsService userDetailsService;
-
     @Autowired
     private JwtUtil jwtUtil;
 

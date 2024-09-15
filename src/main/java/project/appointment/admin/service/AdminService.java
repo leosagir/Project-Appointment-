@@ -5,8 +5,12 @@ import project.appointment.admin.dto.AdminResponseDto;
 import project.appointment.admin.dto.AdminUpdateDto;
 import project.appointment.client.dto.ClientResponseDto;
 
+import java.util.List;
+
 public interface AdminService {
     AdminResponseDto registerAdmin(AdminRequestDto adminRequestDto);
     AdminResponseDto updateAdmin(Long id, AdminUpdateDto adminUpdateDto);
     AdminResponseDto deactivateAdmin(Long id);
+    AdminResponseDto getAdminById(Long id);
+    List<AdminResponseDto> getAllAdmins();
 }

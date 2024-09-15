@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
-    List<Appointment> findByClientAndAppointmentStatusNot(Client client, Appointment.AppointmentStatus appointmentStatus);
-    List<Appointment> findBySpecialistAndAppointmentStatusNot(Specialist specialist, Appointment.AppointmentStatus appointmentStatus);
+    List<Appointment> findBySpecialistAndAppointmentStatus(Specialist specialist, Appointment.AppointmentStatus status);
+    List<Appointment> findByClient(Client client);
 
 }

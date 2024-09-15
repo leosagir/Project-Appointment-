@@ -27,6 +27,8 @@ import project.appointment.specialist.dto.SpecialistUpdateDto;
 import project.appointment.specialist.service.SpecialistServiceImpl;
 import project.appointment.specialization.service.SpecializationServiceImpl;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMINISTRATOR')")
@@ -44,6 +46,24 @@ public class AdminController {
 
     private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 
+    @GetMapping("/{id}")
+    public ResponseEntity<AdminResponseDto> getAdminById(@PathVariable Long id) {
+        AdminResponseDto admin = administratorService.getAdminById(id);
+        return ResponseEntity.ok(admin);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<AdminResponseDto>> getAllAdmins() {
+        List<AdminResponseDto> admins = administratorService.getAllAdmins();
+        return ResponseEntity.ok(admins);
+    }
+
+    @GetMapping("/clients")
+    @PreAuthorize("hasRole('ADMINISTRATOR')")
+    public ResponseEntity<List<ClientResponseDto>> getAllClients() {
+        List<ClientResponseDto> clients = clientService.getAllClients();
+        return ResponseEntity.ok(clients);
+    }
 
     @Transactional
     @PostMapping("/clients/register")

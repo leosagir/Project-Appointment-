@@ -1,5 +1,6 @@
 package project.appointment.security;
 
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,18 +13,14 @@ import project.appointment.client.repository.ClientRepository;
 import project.appointment.specialist.repository.SpecialistRepository;
 
 @Service
+@RequiredArgsConstructor
 public class CompositeUserDetailsService implements UserDetailsService {
 
     private static final Logger logger = LoggerFactory.getLogger(CompositeUserDetailsService.class);
 
-    @Autowired
-    private ClientRepository clientRepository;
-
-    @Autowired
-    private SpecialistRepository specialistRepository;
-
-    @Autowired
-    private AdminRepository administratorRepository;
+    private final ClientRepository clientRepository;
+    private final SpecialistRepository specialistRepository;
+    private final AdminRepository administratorRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -54,33 +51,3 @@ public class CompositeUserDetailsService implements UserDetailsService {
 
 
 
-//@Service
-//public class CompositeUserDetailsService implements UserDetailsService {
-//
-//    @Autowired
-//    private ClientRepository clientRepository;
-//
-//    @Autowired
-//    private SpecialistRepository specialistRepository;
-//
-//    @Autowired
-//    private AdministratorRepository administratorRepository;
-//
-//    @Override
-//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        AppUser user = clientRepository.findByEmail(username)
-//                .orElse(null);
-//
-//        if (user == null) {
-//            user = specialistRepository.findByEmail(username)
-//                    .orElse(null);
-//        }
-//
-//        if (user == null) {
-//            user = administratorRepository.findByEmail(username)
-//                    .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + username));
-//        }
-//
-//        return user;
-//    }
-//}

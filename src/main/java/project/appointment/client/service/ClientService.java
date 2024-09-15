@@ -13,4 +13,6 @@ public interface ClientService {
     ClientResponseDto registerClient(ClientRequestDto clientRequestDto);
     ClientResponseDto updateClient(Long id, ClientUpdateDto updateDto);
     ClientResponseDto deactivateClient(Long id);
+    ClientResponseDto getClientById(Long id);
+    List<ClientResponseDto> getAllClients();
 }
