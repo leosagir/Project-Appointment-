@@ -68,7 +68,6 @@ public class Admin implements AppUser {
     @NotBlank
     private String phone;
 
-    @NotNull
     @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;

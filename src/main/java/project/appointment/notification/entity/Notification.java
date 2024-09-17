@@ -32,12 +32,7 @@ public class Notification {
     @JoinColumn(name = "appointment_id")
     private Appointment appointment;
 
-    @Column(name = "message", length = 255)
-    @NotBlank
-    private String message;
-
     @CreationTimestamp
-    @NotNull
     @Column(name = "sent_at", nullable = false, updatable = false)
     private LocalDateTime sentAt;
 

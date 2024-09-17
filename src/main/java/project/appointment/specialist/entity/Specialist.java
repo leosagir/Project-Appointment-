@@ -14,7 +14,7 @@ import project.appointment.client.entity.Status;
 import project.appointment.review.entity.Review;
 import project.appointment.ENUM.Role;
 import project.appointment.security.AppUser;
-import project.appointment.services.entity.SService;
+import project.appointment.services.entity.Service;
 import project.appointment.specialization.entity.Specialization;
 
 
@@ -60,16 +60,21 @@ public class Specialist implements AppUser {
     @Column(name = "date_of_birth",nullable = false)
     private LocalDate dateOfBirth;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany
     @JoinTable(
             name = "specialist_specialization",
             joinColumns = @JoinColumn(name = "specialist_id"),
             inverseJoinColumns = @JoinColumn(name = "specialization_id")
     )
-    private Set<Specialization> specializations;
+    private Set<Specialization> specializations = new HashSet<>();
 
-    @ManyToMany(mappedBy = "specialists")
-    private Set<SService> services;
+    @ManyToMany
+    @JoinTable(
+            name = "specialist_service",
+            joinColumns = @JoinColumn(name = "specialist_id"),
+            inverseJoinColumns = @JoinColumn(name = "service_id")
+    )
+    private Set<Service> services = new HashSet<>();
 
     @Size(min = 3,max = 510)
     @Column(name = "description", length = 510,nullable = false)
@@ -88,7 +93,6 @@ public class Specialist implements AppUser {
     @NotBlank
     private String phone;
 
-    @NotNull
     @CreationTimestamp
     @Column(name = "created_at",nullable = false)
     private LocalDateTime createdAt;
@@ -105,21 +109,20 @@ public class Specialist implements AppUser {
     @Column(name = "role",nullable = false)
     private Role role=Role.SPECIALIST;
 
-    @OneToMany(mappedBy = "specialist", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Appointment> appointments;
+    @OneToMany(mappedBy = "specialist", orphanRemoval = true)
+    private Set<Appointment> appointments = new HashSet<>();
 
-    @OneToMany(mappedBy = "specialist", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Review> reviews;
+    @OneToMany(mappedBy = "specialist", orphanRemoval = true)
+    private Set<Review> reviews = new HashSet<>();
 
 
-    public Specialist(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, Set<Specialization> specializations, Set<SService> services, String description, String address, String phone, Status status, Role role) {
+    public Specialist(Long id, String email, String firstName, String lastName, LocalDate dateOfBirth, Set<Specialization> specializations, Set<Service> services, String description, String address, String phone, Status status, Role role) {
         this.id = id;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.specializations = specializations;
-        this.services = services;
         this.description = description;
         this.address = address;
         this.phone = phone;

@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import project.appointment.appointment.entity.Appointment;
 import project.appointment.specialist.entity.Specialist;
 import project.appointment.specialization.entity.Specialization;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -20,7 +22,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "t_service")
-public class SService {
+public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -46,25 +48,21 @@ public class SService {
     private String price;
 
     @CreationTimestamp
-    @NotNull
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
-    @NotNull
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-    @ManyToMany
-    @JoinTable(
-            name = "service_specialist",
-            joinColumns = @JoinColumn(name = "service_id"),
-            inverseJoinColumns = @JoinColumn(name = "specialist_id")
-    )
-    private Set<Specialist> specialists;
-
     @ManyToOne
-    @JoinColumn(name = "specialization_id", nullable = false)
+    @JoinColumn(name = "specialization_id")
     private Specialization specialization;
+
+    @ManyToMany(mappedBy = "services")
+    private Set<Specialist> specialists = new HashSet<>();
+
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Appointment> appointments = new HashSet<>();
 
 }

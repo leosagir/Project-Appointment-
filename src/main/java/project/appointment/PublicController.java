@@ -30,8 +30,4 @@ public class PublicController {
         log.info("Client registered successfully: {}", response.getEmail());
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
-    @GetMapping("/appointments/specialist/{specialistId}/free")
-    public ResponseEntity<List<AppointmentResponseDto>> getFreeAppointmentsForSpecialist(@PathVariable Long specialistId) {
-        return ResponseEntity.ok(appointmentService.getFreeAppointmentsForSpecialist(specialistId));
-    }
 }

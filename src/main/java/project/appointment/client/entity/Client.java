@@ -17,9 +17,7 @@ import project.appointment.security.AppUser;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Getter
@@ -71,7 +69,6 @@ public class Client implements AppUser {
     @NotBlank
     private String phone;
 
-    @NotNull
     @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -88,11 +85,11 @@ public class Client implements AppUser {
     @Column(name = "role")
     private Role role=Role.CLIENT;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Appointment> appointments;
+    @OneToMany(mappedBy = "client", orphanRemoval = true)
+    private Set<Appointment> appointments = new HashSet<>();
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Review> reviews;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Review> reviews = new HashSet<>();
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Notification> notifications;

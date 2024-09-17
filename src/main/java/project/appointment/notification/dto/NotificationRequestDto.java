@@ -12,6 +12,4 @@ public class NotificationRequestDto {
     @NotNull
     private Long appointmentId;
 
-    @NotBlank
-    private String message;
 }

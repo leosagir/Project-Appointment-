@@ -1,21 +1,44 @@
 package project.appointment.appointment.service;
 
-import project.appointment.appointment.dto.AppointmentRequestDto;
-import project.appointment.appointment.dto.AppointmentResponseDto;
 
+import org.springframework.transaction.annotation.Transactional;
+import project.appointment.appointment.dto.AppointmentBookDto;
+import project.appointment.appointment.dto.AppointmentCreateDto;
+import project.appointment.appointment.dto.AppointmentDto;
+import project.appointment.appointment.dto.AppointmentUpdateDto;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public interface AppointmentService {
 
-    AppointmentResponseDto createFreeAppointment(Long specialistId, AppointmentRequestDto appointmentRequestDto);
-    AppointmentResponseDto updateFreeAppointment(Long appointmentId, AppointmentRequestDto appointmentRequestDto);
-    void deleteFreeAppointment(Long specialistId, Long appointmentId);
-    AppointmentResponseDto bookAppointment(Long clientId, Long appointmentId);
-    AppointmentResponseDto cancelBookedAppointment(Long clientId, Long appointmentId);
-    AppointmentResponseDto updateBookedAppointment(Long clientId, Long appointmentId, AppointmentRequestDto appointmentRequestDto);
-    List<AppointmentResponseDto> getFreeAppointmentsForSpecialist(Long specialistId);
-    List<AppointmentResponseDto> getBookedAppointmentsForSpecialist(Long specialistId);
-    List<AppointmentResponseDto> getAppointmentsForClient(Long clientId);
+
+    @Transactional
+    AppointmentDto createAppointment(AppointmentCreateDto appointmentCreateDto);
+
+    @Transactional(readOnly = true)
+    AppointmentDto getAppointmentById(Long id);
+
+    @Transactional(readOnly = true)
+    List<AppointmentDto> getAllAppointments();
+
+    @Transactional
+    AppointmentDto updateAppointment(Long id, AppointmentUpdateDto appointmentUpdateDto);
+
+    @Transactional
+    void deleteAppointment(Long id);
+
+    @Transactional
+    AppointmentDto createFreeAppointment(AppointmentCreateDto appointmentCreateDto);
+
+    @Transactional
+    AppointmentDto bookAppointment(Long id, AppointmentBookDto appointmentBookDto);
+
+    @Transactional
+    AppointmentDto cancelBooking(Long id);
+
+    @Transactional(readOnly = true)
+    List<AppointmentDto> getFreeAppointments(Long specialistId);
+
+    @Transactional(readOnly = true)
+    List<AppointmentDto> getBookedAppointments(Long specialistId);
 }

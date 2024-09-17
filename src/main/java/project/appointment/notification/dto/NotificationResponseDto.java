@@ -12,7 +12,6 @@ public class NotificationResponseDto {
     private String clientFullName;
     private Long appointmentId;
     private LocalDateTime appointmentDate;
-    private String message;
     private LocalDateTime sentAt;
     private NotificationStatus status;
 

@@ -7,8 +7,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import project.appointment.services.entity.Service;
 import project.appointment.specialist.entity.Specialist;
 
+import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Getter
@@ -26,8 +28,10 @@ public class Specialization {
     @Column(name = "title", unique = true)
     private String title;
 
-    @Column(name = "specialists")
-    @ManyToMany(mappedBy = "specializations", fetch = FetchType.LAZY)
-    private Set<Specialist> specialists;
+    @ManyToMany(mappedBy = "specializations")
+    private Set<Specialist> specialists = new HashSet<>();
+
+    @OneToMany(mappedBy = "specialization")
+    private Set<Service> services = new HashSet<>();
 
 }

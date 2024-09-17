@@ -1,189 +1,145 @@
 package project.appointment.specialist.service;
 
+import jakarta.transaction.Transactional;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import project.appointment.client.entity.Status;
+import project.appointment.exception.EmailAlreadyExistsException;
+import project.appointment.exception.ResourceNotFoundException;
+import project.appointment.services.entity.Service;
+import project.appointment.services.repository.ServiceRepository;
+import project.appointment.specialist.SpecialistMapper;
 import project.appointment.specialist.dto.SpecialistRequestDto;
 import project.appointment.specialist.dto.SpecialistResponseDto;
 import project.appointment.specialist.dto.SpecialistUpdateDto;
 import project.appointment.specialist.entity.Specialist;
 import project.appointment.specialist.repository.SpecialistRepository;
-import project.appointment.specialization.repository.SpecializationRepository;
-import project.appointment.services.repository.SServiceRepository;
-import project.appointment.exception.ResourceNotFoundException;
-import project.appointment.exception.EmailAlreadyExistsException;
-import project.appointment.exception.RegistrationException;
-import org.modelmapper.ModelMapper;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import jakarta.validation.Validator;
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.ConstraintViolationException;
-import org.springframework.dao.DataIntegrityViolationException;
-import project.appointment.ENUM.Role;
-import project.appointment.client.entity.Status;
 import project.appointment.specialization.entity.Specialization;
-import project.appointment.services.entity.SService;
+import project.appointment.specialization.repository.SpecializationRepository;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Service
+@org.springframework.stereotype.Service
 @RequiredArgsConstructor
+@Slf4j
 public class SpecialistServiceImpl implements SpecialistService {
-    private static final Logger logger = LoggerFactory.getLogger(SpecialistServiceImpl.class);
-
     private final SpecialistRepository specialistRepository;
     private final SpecializationRepository specializationRepository;
-    private final SServiceRepository serviceRepository;
-    private final ModelMapper modelMapper;
-    private final PasswordEncoder passwordEncoder;
+    private final ServiceRepository serviceRepository;
+    private final SpecialistMapper specialistMapper;
     private final Validator validator;
+    private final PasswordEncoder passwordEncoder;
 
-    @Override
-    public SpecialistResponseDto getSpecialistById(Long id) {
-        logger.info("Fetching specialist with id: {}", id);
-        Specialist specialist = specialistRepository.findById(id)
-                .orElseThrow(() -> {
-                    logger.error("Specialist not found with id: {}", id);
-                    return new ResourceNotFoundException("Specialist not found with id: " + id);
-                });
-        logger.info("Specialist found with id: {}", id);
-        return modelMapper.map(specialist, SpecialistResponseDto.class);
-    }
-
-    @Override
-    public List<SpecialistResponseDto> getAllSpecialists() {
-        logger.info("Fetching all specialists");
-        List<Specialist> specialists = specialistRepository.findAll();
-        logger.info("Found {} specialists", specialists.size());
-        return specialists.stream()
-                .map(specialist -> modelMapper.map(specialist, SpecialistResponseDto.class))
-                .collect(Collectors.toList());
-    }
-
-    @Override
     @Transactional
+    @Override
     public SpecialistResponseDto registerSpecialist(SpecialistRequestDto specialistRequestDto) {
-        logger.info("Registering new specialist with email: {}", specialistRequestDto.getEmail());
-        if (specialistRequestDto == null) {
-            logger.error("SpecialistRequestDto is null");
-            throw new IllegalArgumentException("SpecialistRequestDto must not be null");
-        }
+        log.info("Registering new specialist with email: {}", specialistRequestDto.getEmail());
         validateSpecialistRequest(specialistRequestDto);
 
         if (specialistRepository.existsByEmail(specialistRequestDto.getEmail())) {
-            logger.error("Email already exists: {}", specialistRequestDto.getEmail());
             throw new EmailAlreadyExistsException("Email already exists");
         }
-        Specialist specialist = modelMapper.map(specialistRequestDto, Specialist.class);
+
+        Specialist specialist = specialistMapper.specialistRequestDtoToSpecialist(specialistRequestDto);
         specialist.setPassword(passwordEncoder.encode(specialistRequestDto.getPassword()));
-        specialist.setCreatedAt(LocalDateTime.now());
-        specialist.setUpdatedAt(LocalDateTime.now());
-        specialist.setRole(Role.SPECIALIST);
         specialist.setStatus(Status.ACTIVE);
+        setSpecializationsAndServices(specialist, specialistRequestDto.getSpecializationIds(), specialistRequestDto.getServiceIds());
 
-        try {
-            Specialist savedSpecialist = specialistRepository.save(specialist);
-            logger.info("Specialist registered successfully with id: {}", savedSpecialist.getId());
-            return modelMapper.map(savedSpecialist, SpecialistResponseDto.class);
-        } catch (DataIntegrityViolationException e) {
-            logger.error("Error during specialist registration", e);
-            throw new RegistrationException("Error during specialist registration", e);
-        }
+        Specialist savedSpecialist = specialistRepository.save(specialist);
+        log.info("Specialist registered successfully with id: {}", savedSpecialist.getId());
+        return specialistMapper.specialistToSpecialistResponseDto(savedSpecialist);
     }
-
     @Override
     @Transactional
-    public SpecialistResponseDto updateSpecialist(Long id, SpecialistUpdateDto updateDto) {
-        logger.info("Updating specialist with id: {}", id);
+    public SpecialistResponseDto getSpecialistById(Long id) {
+        log.info("Fetching specialist with id: {}", id);
         Specialist specialist = specialistRepository.findById(id)
-                .orElseThrow(() -> {
-                    logger.error("Specialist not found with id: {}", id);
-                    return new ResourceNotFoundException("Specialist not found with id: " + id);
-                });
+                .orElseThrow(() -> new ResourceNotFoundException("Specialist not found"));
+        return specialistMapper.specialistToSpecialistResponseDto(specialist);
+    }
+    @Override
+    @Transactional
+    public List<SpecialistResponseDto> getAllSpecialists() {
+        log.info("Fetching all specialists");
+        List<Specialist> specialists = specialistRepository.findAll();
+        return specialists.stream()
+                .map(specialistMapper::specialistToSpecialistResponseDto)
+                .collect(Collectors.toList());
+    }
 
-        updateSpecialistFields(specialist, updateDto);
+    @Transactional
+    @Override
+    public SpecialistResponseDto updateSpecialist(Long id, SpecialistUpdateDto specialistUpdateDto) {
+        log.info("Updating specialist with id: {}", id);
+        Specialist specialist = specialistRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Specialist not found"));
 
-        specialist.setUpdatedAt(LocalDateTime.now());
+        specialistMapper.updateSpecialistFromDto(specialistUpdateDto, specialist);
+        if (specialistUpdateDto.getSpecializationIds() != null) {
+            setSpecializationsAndServices(specialist, specialistUpdateDto.getSpecializationIds(), specialistUpdateDto.getServiceIds());
+        }
 
         Specialist updatedSpecialist = specialistRepository.save(specialist);
-        logger.info("Specialist updated successfully with id: {}", updatedSpecialist.getId());
-        return modelMapper.map(updatedSpecialist, SpecialistResponseDto.class);
+        log.info("Specialist updated successfully with id: {}", updatedSpecialist.getId());
+        return specialistMapper.specialistToSpecialistResponseDto(updatedSpecialist);
     }
 
-    @Override
     @Transactional
+    @Override
+    public void deleteSpecialist(Long id) {
+        log.info("Deleting specialist with id: {}", id);
+        if (!specialistRepository.existsById(id)) {
+            throw new ResourceNotFoundException("Specialist not found");
+        }
+        specialistRepository.deleteById(id);
+        log.info("Specialist deleted successfully with id: {}", id);
+    }
+
+    @Transactional
+    @Override
     public SpecialistResponseDto deactivateSpecialist(Long id) {
-        logger.info("Deactivating specialist with id: {}", id);
+        log.info("Deactivating specialist with id: {}", id);
         Specialist specialist = specialistRepository.findById(id)
-                .orElseThrow(() -> {
-                    logger.error("Specialist not found with id: {}", id);
-                    return new ResourceNotFoundException("Specialist with id " + id + " not found");
-                });
-
-        if (specialist.getStatus() == Status.INACTIVE) {
-            logger.warn("Specialist with id: {} is already inactive", id);
-            throw new IllegalStateException("Specialist is already inactive");
-        }
-
+                .orElseThrow(() -> new ResourceNotFoundException("Specialist not found"));
         specialist.setStatus(Status.INACTIVE);
-        specialist.setUpdatedAt(LocalDateTime.now());
-
         Specialist updatedSpecialist = specialistRepository.save(specialist);
-        logger.info("Specialist deactivated successfully with id: {}", updatedSpecialist.getId());
-        return modelMapper.map(updatedSpecialist, SpecialistResponseDto.class);
+        log.info("Specialist deactivated successfully with id: {}", updatedSpecialist.getId());
+        return specialistMapper.specialistToSpecialistResponseDto(updatedSpecialist);
+    }
+
+    @Transactional
+    @Override
+    public SpecialistResponseDto reactivateSpecialist(Long id) {
+        log.info("Reactivating specialist with id: {}", id);
+        Specialist specialist = specialistRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Specialist not found"));
+        specialist.setStatus(Status.ACTIVE);
+        Specialist updatedSpecialist = specialistRepository.save(specialist);
+        log.info("Specialist reactivated successfully with id: {}", updatedSpecialist.getId());
+        return specialistMapper.specialistToSpecialistResponseDto(updatedSpecialist);
+    }
+    @Override
+    @Transactional
+    public void setSpecializationsAndServices(Specialist specialist, Set<Long> specializationIds, Set<Long> serviceIds) {
+        Set<Specialization> specializations = specializationRepository.findAllById(specializationIds)
+                .stream().collect(Collectors.toSet());
+        specialist.setSpecializations(specializations);
+
+        Set<Service> services = serviceRepository.findAllById(serviceIds)
+                .stream().collect(Collectors.toSet());
+        specialist.setServices(services);
     }
 
     private void validateSpecialistRequest(SpecialistRequestDto specialistRequestDto) {
         Set<ConstraintViolation<SpecialistRequestDto>> violations = validator.validate(specialistRequestDto);
         if (!violations.isEmpty()) {
-            logger.error("Validation failed for SpecialistRequestDto: {}", violations);
             throw new ConstraintViolationException(violations);
-        }
-    }
-
-    private void updateSpecialistFields(Specialist specialist, SpecialistUpdateDto updateDto) {
-        if (updateDto.getFirstName() != null) {
-            specialist.setFirstName(updateDto.getFirstName());
-        }
-        if (updateDto.getLastName() != null) {
-            specialist.setLastName(updateDto.getLastName());
-        }
-        if (updateDto.getSpecializations() != null && !updateDto.getSpecializations().isEmpty()) {
-            Set<Specialization> specializations = updateDto.getSpecializations().stream()
-                    .map(specDto -> specializationRepository.findByTitle(specDto.getTitle())
-                            .orElseThrow(() -> {
-                                logger.error("Specialization not found: {}", specDto.getTitle());
-                                return new ResourceNotFoundException("Specialization not found: " + specDto.getTitle());
-                            }))
-                    .collect(Collectors.toSet());
-            specialist.setSpecializations(specializations);
-        }
-        if (updateDto.getServices() != null && !updateDto.getServices().isEmpty()) {
-            Set<SService> services = updateDto.getServices().stream()
-                    .map(serviceDto -> serviceRepository.findByTitle(serviceDto.getTitle())
-                            .orElseThrow(() -> {
-                                logger.error("Service not found: {}", serviceDto.getTitle());
-                                return new ResourceNotFoundException("Service not found: " + serviceDto.getTitle());
-                            }))
-                    .collect(Collectors.toSet());
-            specialist.setServices(services);
-        }
-        if (updateDto.getDescription() != null) {
-            specialist.setDescription(updateDto.getDescription());
-        }
-        if (updateDto.getDateOfBirth() != null) {
-            specialist.setDateOfBirth(updateDto.getDateOfBirth());
-        }
-        if (updateDto.getAddress() != null) {
-            specialist.setAddress(updateDto.getAddress());
-        }
-        if (updateDto.getPhone() != null) {
-            specialist.setPhone(updateDto.getPhone());
         }
     }
 }
