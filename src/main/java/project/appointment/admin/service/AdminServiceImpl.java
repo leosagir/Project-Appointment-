@@ -16,7 +16,7 @@ import project.appointment.admin.dto.AdminUpdateDto;
 import project.appointment.admin.entity.Admin;
 import project.appointment.admin.AdminMapper;
 import project.appointment.admin.repository.AdminRepository;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 import project.appointment.exception.EmailAlreadyExistsException;
 import project.appointment.exception.ResourceNotFoundException;
 
@@ -161,7 +161,7 @@ public class AdminServiceImpl implements AdminService {
 //import project.appointment.admin.dto.AdminUpdateDto;
 //import project.appointment.admin.entity.Admin;
 //import project.appointment.admin.repository.AdminRepository;
-//import project.appointment.client.entity.Status;
+//import project.appointment.ENUM.Status;
 //import project.appointment.exception.EmailAlreadyExistsException;
 //import project.appointment.exception.RegistrationException;
 //import project.appointment.exception.ResourceNotFoundException;

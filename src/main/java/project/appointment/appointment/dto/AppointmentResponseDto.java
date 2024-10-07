@@ -8,8 +8,11 @@ import java.time.LocalDateTime;
 @Data
 public class AppointmentResponseDto {
     private Long id;
+    private Long specialistId;
     private String specialistName;
+    private Long clientId;
     private String clientName;
+    private Long serviceId;
     private String serviceName;
     private LocalDateTime startTime;
     private LocalDateTime endTime;

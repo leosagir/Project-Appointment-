@@ -36,8 +36,7 @@ public class Appointment {
     private Client client;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "service_id", nullable = false)
-    @NotNull(message = "Service is required")
+    @JoinColumn(name = "service_id", nullable = true)
     private Service service;
 
     @NotNull(message = "Start time is required")

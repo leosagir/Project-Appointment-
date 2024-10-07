@@ -2,6 +2,7 @@ package project.appointment.review.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import project.appointment.appointment.dto.AppointmentResponseDto;
 import project.appointment.review.dto.ReviewCreateDto;
 import project.appointment.review.dto.ReviewDto;
 import project.appointment.review.dto.ReviewResponseDto;
@@ -31,4 +32,10 @@ public interface ReviewService {
 
     @Transactional(readOnly = true)
     List<ReviewResponseDto> getAllReviewResponses();
+
+    @Transactional(readOnly = true)
+    List<ReviewResponseDto> getReviewsByClientId(Long clientId);
+
+    @Transactional(readOnly = true)
+    List<AppointmentResponseDto> getAvailableAppointmentsForReview(Long clientId);
 }

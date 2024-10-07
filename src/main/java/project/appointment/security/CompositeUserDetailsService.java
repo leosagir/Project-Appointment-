@@ -24,7 +24,7 @@ public class CompositeUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        logger.info("Trying to load user by username: {}", username);
+        logger.info("Attempting to load user by username: {}", username);
 
         AppUser user = clientRepository.findByEmail(username)
                 .orElse(null);
@@ -44,7 +44,7 @@ public class CompositeUserDetailsService implements UserDetailsService {
                     });
         }
 
-        logger.info("User found: {}", user.getUsername());
+        logger.info("User found: {} with role: {}", user.getUsername(), user.getAuthorities());
         return user;
     }
 }

@@ -1,7 +1,5 @@
 package project.appointment.client.service;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import jakarta.transaction.Transactional;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
@@ -10,17 +8,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import project.appointment.admin.entity.Admin;
 import project.appointment.client.ClientMapper;
 import project.appointment.client.dto.ClientRequestDto;
 import project.appointment.client.dto.ClientResponseDto;
 import project.appointment.client.dto.ClientUpdateDto;
 import project.appointment.client.entity.Client;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 import project.appointment.client.repository.ClientRepository;
 import project.appointment.exception.EmailAlreadyExistsException;
 import project.appointment.exception.ResourceNotFoundException;
-import project.appointment.specialist.entity.Specialist;
 
 import java.util.List;
 import java.util.Set;

@@ -1,7 +1,7 @@
 package project.appointment.specialist.dto;
 
 import lombok.Data;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 import project.appointment.services.dto.ServiceShortDto;
 import project.appointment.specialization.dto.SpecializationShortDto;
 

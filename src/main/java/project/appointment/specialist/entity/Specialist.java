@@ -10,7 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import project.appointment.appointment.entity.Appointment;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 import project.appointment.review.entity.Review;
 import project.appointment.ENUM.Role;
 import project.appointment.security.AppUser;

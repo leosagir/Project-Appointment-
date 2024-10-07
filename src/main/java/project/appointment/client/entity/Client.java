@@ -10,6 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import project.appointment.ENUM.Role;
+import project.appointment.ENUM.Status;
 import project.appointment.appointment.entity.Appointment;
 import project.appointment.notification.entity.Notification;
 import project.appointment.review.entity.Review;
@@ -85,7 +86,7 @@ public class Client implements AppUser {
     @Column(name = "role")
     private Role role=Role.CLIENT;
 
-    @OneToMany(mappedBy = "client", orphanRemoval = true)
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER, orphanRemoval = true)
     private Set<Appointment> appointments = new HashSet<>();
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)

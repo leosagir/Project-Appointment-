@@ -7,7 +7,7 @@ import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 import project.appointment.exception.EmailAlreadyExistsException;
 import project.appointment.exception.ResourceNotFoundException;
 import project.appointment.services.entity.Service;

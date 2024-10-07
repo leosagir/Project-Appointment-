@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import project.appointment.appointment.dto.AppointmentResponseDto;
 import project.appointment.review.dto.*;
 import project.appointment.review.service.ReviewService;
 import project.appointment.security.AppUser;
@@ -59,5 +60,17 @@ public class ReviewController_new {
     @GetMapping
     public ResponseEntity<List<ReviewResponseDto>> getAllReviews() {
         return ResponseEntity.ok(reviewService.getAllReviewResponses());
+    }
+
+    @GetMapping("/client")
+    @PreAuthorize("hasRole('CLIENT')")
+    public ResponseEntity<List<ReviewResponseDto>> getCurrentClientReviews(@AuthenticationPrincipal AppUser currentUser) {
+        return ResponseEntity.ok(reviewService.getReviewsByClientId(currentUser.getId()));
+    }
+
+    @GetMapping("/available-appointments")
+    @PreAuthorize("hasRole('CLIENT')")
+    public ResponseEntity<List<AppointmentResponseDto>> getAvailableAppointmentsForReview(@AuthenticationPrincipal AppUser currentUser) {
+        return ResponseEntity.ok(reviewService.getAvailableAppointmentsForReview(currentUser.getId()));
     }
 }

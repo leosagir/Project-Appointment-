@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 @Data
 public class AppointmentCreateDto {
     private Long specialistId;
-    private Long serviceId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 }

@@ -30,4 +30,8 @@ public class PublicController {
         log.info("Client registered successfully: {}", response.getEmail());
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+    @GetMapping("/example")
+    public List<String> listExample() {
+        return  List.of("Шмфт","Борис","Таня");
+    }
 }

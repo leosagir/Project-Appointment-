@@ -1,7 +1,7 @@
 package project.appointment.client.dto;
 
 import lombok.Data;
-import project.appointment.client.entity.Status;
+import project.appointment.ENUM.Status;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

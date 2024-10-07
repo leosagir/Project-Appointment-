@@ -1,0 +1,1200 @@
+2024-09-25T07:48:56.284+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T07:48:56.288+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T07:48:56.325+02:00  INFO 12052 --- [Appointment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-25T07:48:56.325+02:00  INFO 12052 --- [Appointment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-25T07:48:56.980+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T07:48:57.043+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-09-25T07:48:57.500+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T07:48:57.511+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T07:48:57.511+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T07:48:57.551+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T07:48:57.551+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1226 ms
+2024-09-25T07:48:57.654+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T07:48:57.718+02:00  INFO 12052 --- [Appointment] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-25T07:48:57.752+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T07:48:57.999+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T07:48:58.025+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T07:48:58.153+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40c772f1
+2024-09-25T07:48:58.154+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T07:48:59.093+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T07:48:59.317+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T07:48:59.623+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T07:48:59.775+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T07:48:59.782+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T07:48:59.878+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 56 mappings in 'requestMappingHandlerMapping'
+2024-09-25T07:48:59.943+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T07:48:59.951+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 4.029 seconds (process running for 4.588)
+2024-09-25T07:49:22.761+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T07:49:22.762+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T07:49:22.765+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-25T07:49:22.770+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-25T07:49:22.773+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-25T07:49:22.845+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-25T07:49:22.891+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-25T07:49:22.896+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@27fa89d7
+2024-09-25T07:49:22.922+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1da990cf
+2024-09-25T07:49:22.922+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-25T07:49:22.922+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 160 ms
+2024-09-25T07:49:22.993+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name compositeUserDetailsService
+2024-09-25T07:49:23.130+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtRequestFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-25T07:49:23.166+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-09-25T07:49:23.173+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T07:49:23.174+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-09-25T07:49:23.178+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-25T07:49:23.182+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.appointment.security.AuthController#createAuthenticationToken(AuthenticationRequest)
+2024-09-25T07:49:23.257+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.appointment.security.AuthenticationRequest@47f10e53]
+2024-09-25T07:49:23.328+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] p.a.s.CompositeUserDetailsService        : Trying to load user by username: leosagir@gmail.com
+2024-09-25T07:49:23.497+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.created_at,
+        c1_0.date_of_birth,
+        c1_0.email,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.password,
+        c1_0.phone,
+        c1_0.role,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        t_client c1_0 
+    where
+        c1_0.email=?
+2024-09-25T07:49:23.513+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] p.a.s.CompositeUserDetailsService        : User not found in ClientRepository, checking SpecialistRepository
+2024-09-25T07:49:23.516+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.created_at,
+        s1_0.date_of_birth,
+        s1_0.description,
+        s1_0.email,
+        s1_0.first_name,
+        s1_0.last_name,
+        s1_0.password,
+        s1_0.phone,
+        s1_0.role,
+        s1_0.status,
+        s1_0.updated_at 
+    from
+        t_specialist s1_0 
+    where
+        s1_0.email=?
+2024-09-25T07:49:23.519+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] p.a.s.CompositeUserDetailsService        : User not found in SpecialistRepository, checking AdministratorRepository
+2024-09-25T07:49:23.522+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.address,
+        a1_0.created_at,
+        a1_0.date_of_birth,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.password,
+        a1_0.phone,
+        a1_0.role,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        t_admin a1_0 
+    where
+        a1_0.email=?
+2024-09-25T07:49:23.537+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] p.a.s.CompositeUserDetailsService        : User found: leosagir@gmail.com
+2024-09-25T07:49:23.759+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-25T07:49:23.812+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-1] p.appointment.security.AuthController    : User authenticated successfully: leosagir@gmail.com
+2024-09-25T07:49:23.822+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-25T07:49:23.823+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{roles=[ROLE_ADMINISTRATOR], email=leosagir@gmail.com, token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsZW9zYW (truncated)...]
+2024-09-25T07:49:23.832+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.appointment.security.AuthController#createAuthenticationToken(AuthenticationRequest)
+2024-09-25T07:49:50.099+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.appointment.security.AuthenticationRequest@4a006b96]
+2024-09-25T07:49:50.101+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-3] p.a.s.CompositeUserDetailsService        : Trying to load user by username: leosagir@gmail.com
+2024-09-25T07:49:50.103+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.created_at,
+        c1_0.date_of_birth,
+        c1_0.email,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.password,
+        c1_0.phone,
+        c1_0.role,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        t_client c1_0 
+    where
+        c1_0.email=?
+2024-09-25T07:49:50.108+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-3] p.a.s.CompositeUserDetailsService        : User not found in ClientRepository, checking SpecialistRepository
+2024-09-25T07:49:50.109+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.created_at,
+        s1_0.date_of_birth,
+        s1_0.description,
+        s1_0.email,
+        s1_0.first_name,
+        s1_0.last_name,
+        s1_0.password,
+        s1_0.phone,
+        s1_0.role,
+        s1_0.status,
+        s1_0.updated_at 
+    from
+        t_specialist s1_0 
+    where
+        s1_0.email=?
+2024-09-25T07:49:50.112+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-3] p.a.s.CompositeUserDetailsService        : User not found in SpecialistRepository, checking AdministratorRepository
+2024-09-25T07:49:50.113+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.address,
+        a1_0.created_at,
+        a1_0.date_of_birth,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.password,
+        a1_0.phone,
+        a1_0.role,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        t_admin a1_0 
+    where
+        a1_0.email=?
+2024-09-25T07:49:50.117+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-3] p.a.s.CompositeUserDetailsService        : User found: leosagir@gmail.com
+2024-09-25T07:49:50.332+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-25T07:49:50.333+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-3] p.appointment.security.AuthController    : User authenticated successfully: leosagir@gmail.com
+2024-09-25T07:49:50.334+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-25T07:49:50.334+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{roles=[ROLE_ADMINISTRATOR], email=leosagir@gmail.com, token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsZW9zYW (truncated)...]
+2024-09-25T07:49:50.335+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-25T07:50:52.746+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-09-25T07:50:52.746+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T07:50:52.747+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-09-25T07:50:52.747+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/auth/login", parameters={}
+2024-09-25T07:50:52.747+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to project.appointment.security.AuthController#createAuthenticationToken(AuthenticationRequest)
+2024-09-25T07:50:52.748+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [project.appointment.security.AuthenticationRequest@3aa1596]
+2024-09-25T07:50:52.748+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-7] p.a.s.CompositeUserDetailsService        : Trying to load user by username: leosagir@gmail.com
+2024-09-25T07:50:52.750+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.created_at,
+        c1_0.date_of_birth,
+        c1_0.email,
+        c1_0.first_name,
+        c1_0.last_name,
+        c1_0.password,
+        c1_0.phone,
+        c1_0.role,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        t_client c1_0 
+    where
+        c1_0.email=?
+2024-09-25T07:50:52.755+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-7] p.a.s.CompositeUserDetailsService        : User not found in ClientRepository, checking SpecialistRepository
+2024-09-25T07:50:52.757+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.address,
+        s1_0.created_at,
+        s1_0.date_of_birth,
+        s1_0.description,
+        s1_0.email,
+        s1_0.first_name,
+        s1_0.last_name,
+        s1_0.password,
+        s1_0.phone,
+        s1_0.role,
+        s1_0.status,
+        s1_0.updated_at 
+    from
+        t_specialist s1_0 
+    where
+        s1_0.email=?
+2024-09-25T07:50:52.759+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-7] p.a.s.CompositeUserDetailsService        : User not found in SpecialistRepository, checking AdministratorRepository
+2024-09-25T07:50:52.761+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.address,
+        a1_0.created_at,
+        a1_0.date_of_birth,
+        a1_0.email,
+        a1_0.first_name,
+        a1_0.last_name,
+        a1_0.password,
+        a1_0.phone,
+        a1_0.role,
+        a1_0.status,
+        a1_0.updated_at 
+    from
+        t_admin a1_0 
+    where
+        a1_0.email=?
+2024-09-25T07:50:52.763+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-7] p.a.s.CompositeUserDetailsService        : User found: leosagir@gmail.com
+2024-09-25T07:50:52.980+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-09-25T07:50:52.982+02:00  INFO 12052 --- [Appointment] [http-nio-8080-exec-7] p.appointment.security.AuthController    : User authenticated successfully: leosagir@gmail.com
+2024-09-25T07:50:52.982+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-09-25T07:50:52.982+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{roles=[ROLE_ADMINISTRATOR], email=leosagir@gmail.com, token=eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsZW9zYW (truncated)...]
+2024-09-25T07:50:52.983+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-25T07:56:19.657+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/specializations
+2024-09-25T07:56:19.673+02:00  WARN 12052 --- [Appointment] [http-nio-8080-exec-10] p.appointment.security.JwtRequestFilter  : JWT token is expired
+2024-09-25T07:56:19.673+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T07:56:38.976+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/specializations
+2024-09-25T07:56:38.978+02:00  WARN 12052 --- [Appointment] [http-nio-8080-exec-8] p.appointment.security.JwtRequestFilter  : JWT token is expired
+2024-09-25T07:56:38.978+02:00 DEBUG 12052 --- [Appointment] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T08:12:18.230+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:12:18.253+02:00  INFO 12052 --- [Appointment] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:12:18.256+02:00  INFO 12052 --- [Appointment] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T08:12:18.258+02:00  INFO 12052 --- [Appointment] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T08:12:18.310+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:12:18.310+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:12:18.423+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:12:18.445+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:12:18.560+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:12:18.561+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:12:18.561+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:12:18.576+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:12:18.577+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2024-09-25T08:12:18.584+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'jwtRequestFilter': Resolution of declared constructors on bean Class [project.appointment.security.JwtRequestFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1dc96729] failed
+2024-09-25T08:12:18.588+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T08:12:18.590+02:00  WARN 12052 --- [Appointment] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T08:12:18.594+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T08:12:18.610+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at project.appointment.AppointmentApplication.main(AppointmentApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtRequestFilter': Resolution of declared constructors on bean Class [project.appointment.security.JwtRequestFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1dc96729] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: project/appointment/security/JwtUtil
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 58 common frames omitted
+Caused by: java.lang.ClassNotFoundException: project.appointment.security.JwtUtil
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 62 common frames omitted
+
+2024-09-25T08:12:20.073+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:12:20.073+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:12:20.245+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:12:20.277+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:12:20.398+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:12:20.400+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:12:20.400+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:12:20.409+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:12:20.409+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 335 ms
+2024-09-25T08:12:20.466+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:12:20.469+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:12:20.481+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:12:20.483+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-09-25T08:12:20.503+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@65129988
+2024-09-25T08:12:20.503+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-09-25T08:12:20.686+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:12:20.804+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:12:20.887+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtRequestFilter' defined in file [E:\Projects\Appoinment\Appoinment\target\classes\project\appointment\security\JwtRequestFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+2024-09-25T08:12:20.887+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T08:12:20.889+02:00  WARN 12052 --- [Appointment] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+2024-09-25T08:12:20.889+02:00  WARN 12052 --- [Appointment] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-2 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/java.lang.Thread.sleep(Native Method)
+ app//com.zaxxer.hikari.util.UtilityElf.quietlySleep(UtilityElf.java:53)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:729)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+ java.base@17.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+2024-09-25T08:12:20.889+02:00  WARN 12052 --- [Appointment] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T08:12:20.889+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:12:20.890+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-09-25T08:12:20.893+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-09-25T08:12:20.896+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T08:12:20.899+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at project.appointment.AppointmentApplication.main(AppointmentApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtRequestFilter' defined in file [E:\Projects\Appoinment\Appoinment\target\classes\project\appointment\security\JwtRequestFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 59 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.access-token.expiration' in value "${jwt.access-token.expiration}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 71 common frames omitted
+
+2024-09-25T08:13:07.281+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:13:07.281+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:13:07.397+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:13:07.414+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:13:07.483+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:13:07.484+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:13:07.484+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:13:07.493+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:13:07.493+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 211 ms
+2024-09-25T08:13:07.497+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'jwtRequestFilter': Resolution of declared constructors on bean Class [project.appointment.security.JwtRequestFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@bc77d01] failed
+2024-09-25T08:13:07.497+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T08:13:07.499+02:00  WARN 12052 --- [Appointment] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T08:13:07.501+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T08:13:07.502+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at project.appointment.AppointmentApplication.main(AppointmentApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtRequestFilter': Resolution of declared constructors on bean Class [project.appointment.security.JwtRequestFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@bc77d01] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: project/appointment/security/JwtUtil
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 58 common frames omitted
+Caused by: java.lang.ClassNotFoundException: project.appointment.security.JwtUtil
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 62 common frames omitted
+
+2024-09-25T08:14:54.015+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:14:54.016+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:14:54.115+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:14:54.132+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:14:54.154+02:00  WARN 12052 --- [Appointment] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Unable to load cache item
+2024-09-25T08:14:54.157+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T08:14:54.159+02:00 ERROR 12052 --- [Appointment] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Unable to load cache item
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:75) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:130) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:317) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.proxy.Enhancer.createHelper(Enhancer.java:562) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.proxy.Enhancer.createClass(Enhancer.java:407) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.createClass(ConfigurationClassEnhancer.java:156) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:113) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:534) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:311) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:153) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at project.appointment.AppointmentApplication.main(AppointmentApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: java.lang.NoClassDefFoundError: project/appointment/security/JwtRequestFilter
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[na:na]
+	at org.springframework.cglib.proxy.Enhancer.generateClass(Enhancer.java:655) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.transform.TransformingClassGenerator.generateClass(TransformingClassGenerator.java:35) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:26) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.ClassLoaderAwareGeneratorStrategy.generate(ClassLoaderAwareGeneratorStrategy.java:57) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:366) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.proxy.Enhancer.generate(Enhancer.java:575) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.lambda$new$1(AbstractClassGenerator.java:107) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.cglib.core.internal.LoadingCache.lambda$createEntry$1(LoadingCache.java:52) ~[spring-core-6.1.12.jar:6.1.12]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:57) ~[spring-core-6.1.12.jar:6.1.12]
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: project.appointment.security.JwtRequestFilter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 38 common frames omitted
+
+2024-09-25T08:15:28.139+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:15:28.139+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:15:28.385+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:15:28.420+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:15:28.620+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:15:28.620+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:15:28.620+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:15:28.641+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:15:28.641+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 500 ms
+2024-09-25T08:15:28.654+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:15:28.691+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:15:28.692+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:15:28.700+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:15:28.701+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-09-25T08:15:28.715+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@70f84625
+2024-09-25T08:15:28.715+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-09-25T08:15:28.885+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:15:29.018+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:15:29.176+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:15:29.180+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:15:29.233+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:15:29.264+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:15:29.264+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 1.153 seconds (process running for 1593.901)
+2024-09-25T08:15:29.269+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   SpringBootWebSecurityConfiguration.SecurityFilterChainConfiguration matched:
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-09-25T08:21:10.054+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:21:10.074+02:00  INFO 12052 --- [Appointment] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:21:10.075+02:00  INFO 12052 --- [Appointment] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-09-25T08:21:10.076+02:00  INFO 12052 --- [Appointment] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-09-25T08:21:10.139+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:21:10.140+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:21:10.246+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:21:10.262+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:21:10.321+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:21:10.322+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:21:10.322+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:21:10.333+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:21:10.333+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
+2024-09-25T08:21:10.339+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:21:10.356+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:21:10.357+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:21:10.361+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:21:10.362+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-09-25T08:21:10.375+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@52ae8e9f
+2024-09-25T08:21:10.376+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-09-25T08:21:10.469+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:21:10.575+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:21:10.702+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:21:10.706+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:21:10.738+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:21:10.766+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:21:10.767+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.647 seconds (process running for 1935.403)
+2024-09-25T08:21:10.768+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:22:49.969+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:22:49.988+02:00  INFO 12052 --- [Appointment] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:22:49.988+02:00  INFO 12052 --- [Appointment] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-09-25T08:22:49.989+02:00  INFO 12052 --- [Appointment] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-09-25T08:22:50.035+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:22:50.035+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:22:50.136+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:22:50.150+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:22:50.210+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:22:50.210+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:22:50.210+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:22:50.218+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:22:50.218+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 182 ms
+2024-09-25T08:22:50.224+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:22:50.239+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:22:50.240+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:22:50.243+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:22:50.244+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-09-25T08:22:50.258+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@485c3be7
+2024-09-25T08:22:50.258+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-09-25T08:22:50.350+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:22:50.448+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:22:50.546+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:22:50.547+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:22:50.570+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:22:50.591+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:22:50.591+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.567 seconds (process running for 2035.227)
+2024-09-25T08:22:50.592+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:22:53.980+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:22:54.003+02:00  INFO 12052 --- [Appointment] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:22:54.003+02:00  INFO 12052 --- [Appointment] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-09-25T08:22:54.005+02:00  INFO 12052 --- [Appointment] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-09-25T08:22:54.077+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:22:54.077+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:22:54.191+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:22:54.213+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:22:54.291+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:22:54.291+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:22:54.291+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:22:54.305+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:22:54.305+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 227 ms
+2024-09-25T08:22:54.312+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:22:54.331+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:22:54.332+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:22:54.336+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:22:54.337+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-09-25T08:22:54.347+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@7bfc6f6a
+2024-09-25T08:22:54.347+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-09-25T08:22:54.448+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:22:54.554+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:22:54.653+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:22:54.655+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:22:54.679+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:22:54.706+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:22:54.707+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.645 seconds (process running for 2039.343)
+2024-09-25T08:22:54.709+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:23:29.757+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:23:29.779+02:00  INFO 12052 --- [Appointment] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:23:29.779+02:00  INFO 12052 --- [Appointment] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-09-25T08:23:29.781+02:00  INFO 12052 --- [Appointment] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-09-25T08:23:29.848+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:23:29.848+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:23:29.957+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:23:29.975+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:23:30.030+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:23:30.031+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:23:30.031+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:23:30.043+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:23:30.043+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2024-09-25T08:23:30.050+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:23:30.067+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:23:30.069+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:23:30.074+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:23:30.074+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-09-25T08:23:30.088+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@1357db3b
+2024-09-25T08:23:30.088+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-09-25T08:23:30.206+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:23:30.327+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:23:30.460+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:23:30.462+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:23:30.505+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:23:30.551+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:23:30.554+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.721 seconds (process running for 2075.19)
+2024-09-25T08:23:30.557+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:23:31.845+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:23:31.863+02:00  INFO 12052 --- [Appointment] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:23:31.863+02:00  INFO 12052 --- [Appointment] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-09-25T08:23:31.864+02:00  INFO 12052 --- [Appointment] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-09-25T08:23:31.925+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:23:31.925+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:23:32.048+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:23:32.068+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:23:32.123+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:23:32.123+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:23:32.124+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:23:32.133+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:23:32.133+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 207 ms
+2024-09-25T08:23:32.140+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:23:32.156+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:23:32.158+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:23:32.163+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:23:32.163+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-09-25T08:23:32.173+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@1621f636
+2024-09-25T08:23:32.173+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-09-25T08:23:32.265+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:23:32.365+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:23:32.454+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:23:32.456+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:23:32.477+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:23:32.503+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:23:32.503+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.594 seconds (process running for 2077.14)
+2024-09-25T08:23:32.505+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:24:43.417+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:24:43.442+02:00  INFO 12052 --- [Appointment] [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:24:43.444+02:00  INFO 12052 --- [Appointment] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-09-25T08:24:43.445+02:00  INFO 12052 --- [Appointment] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-09-25T08:24:43.514+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:24:43.515+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:24:43.617+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:24:43.633+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:24:43.678+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:24:43.678+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:24:43.678+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:24:43.686+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:24:43.686+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 170 ms
+2024-09-25T08:24:43.691+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:24:43.706+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:24:43.709+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:24:43.712+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:24:43.712+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-09-25T08:24:43.725+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@26f079ef
+2024-09-25T08:24:43.725+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-09-25T08:24:43.798+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:24:43.908+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:24:44.068+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:24:44.071+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:24:44.112+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:24:44.156+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:24:44.158+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.663 seconds (process running for 2148.794)
+2024-09-25T08:24:44.161+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:24:45.468+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:24:45.485+02:00  INFO 12052 --- [Appointment] [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:24:45.485+02:00  INFO 12052 --- [Appointment] [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-09-25T08:24:45.486+02:00  INFO 12052 --- [Appointment] [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-09-25T08:24:45.543+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:24:45.543+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:24:45.634+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:24:45.649+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:24:45.695+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:24:45.695+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:24:45.695+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:24:45.710+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:24:45.710+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 165 ms
+2024-09-25T08:24:45.715+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:24:45.731+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:24:45.732+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:24:45.736+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:24:45.736+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-09-25T08:24:45.749+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@29af83fc
+2024-09-25T08:24:45.749+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-09-25T08:24:45.819+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:24:45.914+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:24:46.010+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:24:46.013+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:24:46.032+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:24:46.056+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:24:46.057+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.526 seconds (process running for 2150.693)
+2024-09-25T08:24:46.058+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:25:49.675+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:25:49.694+02:00  INFO 12052 --- [Appointment] [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:25:49.694+02:00  INFO 12052 --- [Appointment] [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-09-25T08:25:49.696+02:00  INFO 12052 --- [Appointment] [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-09-25T08:25:49.777+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:25:49.778+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:25:49.959+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:25:49.987+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:25:50.062+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:25:50.063+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:25:50.063+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:25:50.074+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:25:50.074+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
+2024-09-25T08:25:50.081+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:25:50.104+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:25:50.106+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:25:50.110+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:25:50.110+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-09-25T08:25:50.127+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection org.postgresql.jdbc.PgConnection@536c32d4
+2024-09-25T08:25:50.128+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-09-25T08:25:50.225+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:25:50.349+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:25:50.438+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:25:50.440+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:25:50.459+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:25:50.482+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:25:50.484+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.729 seconds (process running for 2215.119)
+2024-09-25T08:25:50.484+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:25:51.855+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:25:51.871+02:00  INFO 12052 --- [Appointment] [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:25:51.873+02:00  INFO 12052 --- [Appointment] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-09-25T08:25:51.874+02:00  INFO 12052 --- [Appointment] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-09-25T08:25:51.931+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:25:51.931+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:25:52.021+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:25:52.041+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:25:52.143+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:25:52.145+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:25:52.145+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:25:52.162+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:25:52.162+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 229 ms
+2024-09-25T08:25:52.170+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:25:52.194+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:25:52.194+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:25:52.203+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:25:52.203+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-09-25T08:25:52.218+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection org.postgresql.jdbc.PgConnection@20a21e2b
+2024-09-25T08:25:52.218+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-09-25T08:25:52.368+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:25:52.460+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:25:52.595+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:25:52.599+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:25:52.640+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:25:52.685+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:25:52.687+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.768 seconds (process running for 2217.323)
+2024-09-25T08:25:52.688+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:26:38.953+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-09-25T08:26:38.973+02:00  INFO 12052 --- [Appointment] [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:26:38.973+02:00  INFO 12052 --- [Appointment] [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2024-09-25T08:26:38.974+02:00  INFO 12052 --- [Appointment] [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2024-09-25T08:26:39.038+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:26:39.038+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:26:39.160+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:26:39.185+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:26:39.267+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:26:39.267+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:26:39.267+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:26:39.281+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:26:39.281+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 242 ms
+2024-09-25T08:26:39.289+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:26:39.308+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:26:39.309+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:26:39.312+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:26:39.313+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-09-25T08:26:39.325+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection org.postgresql.jdbc.PgConnection@7efcfb
+2024-09-25T08:26:39.325+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-09-25T08:26:39.405+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:26:39.504+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:26:39.657+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:26:39.660+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:26:39.694+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:26:39.730+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:26:39.731+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.707 seconds (process running for 2264.367)
+2024-09-25T08:26:39.732+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:26:41.039+02:00  INFO 12052 --- [Appointment] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-09-25T08:26:41.057+02:00  INFO 12052 --- [Appointment] [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:26:41.057+02:00  INFO 12052 --- [Appointment] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-09-25T08:26:41.057+02:00  INFO 12052 --- [Appointment] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-09-25T08:26:41.119+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 12052 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:26:41.119+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:26:41.210+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:26:41.225+02:00  INFO 12052 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 8 JPA repository interfaces.
+2024-09-25T08:26:41.275+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:26:41.276+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:26:41.276+02:00  INFO 12052 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:26:41.287+02:00  INFO 12052 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:26:41.287+02:00  INFO 12052 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 167 ms
+2024-09-25T08:26:41.294+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.springframework.web.filter.CorsFilter  : Filter 'corsFilter' configured for use
+2024-09-25T08:26:41.310+02:00  INFO 12052 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:26:41.311+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:26:41.314+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:26:41.315+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-09-25T08:26:41.325+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection org.postgresql.jdbc.PgConnection@6af876a5
+2024-09-25T08:26:41.325+02:00  INFO 12052 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-09-25T08:26:41.393+02:00  INFO 12052 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:26:41.481+02:00  INFO 12052 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:26:41.601+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T08:26:41.604+02:00  INFO 12052 --- [Appointment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T08:26:41.638+02:00 DEBUG 12052 --- [Appointment] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 55 mappings in 'requestMappingHandlerMapping'
+2024-09-25T08:26:41.676+02:00 DEBUG 12052 --- [Appointment] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-25T08:26:41.676+02:00  INFO 12052 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Started AppointmentApplication in 0.568 seconds (process running for 2266.319)
+2024-09-25T08:26:41.684+02:00  INFO 12052 --- [Appointment] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T08:27:35.239+02:00  INFO 12052 --- [Appointment] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:27:35.239+02:00  INFO 12052 --- [Appointment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-09-25T08:27:35.241+02:00  INFO 12052 --- [Appointment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-09-25T08:27:41.303+02:00  INFO 13132 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : Starting AppointmentApplication using Java 17.0.12 with PID 13132 (E:\Projects\Appoinment\Appoinment\target\classes started by leosa in E:\Projects\Appoinment\Appoinment)
+2024-09-25T08:27:41.305+02:00  INFO 13132 --- [Appointment] [restartedMain] p.appointment.AppointmentApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T08:27:41.336+02:00  INFO 13132 --- [Appointment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-25T08:27:41.336+02:00  INFO 13132 --- [Appointment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-25T08:27:41.791+02:00  INFO 13132 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T08:27:41.847+02:00  INFO 13132 --- [Appointment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 9 JPA repository interfaces.
+2024-09-25T08:27:42.257+02:00  INFO 13132 --- [Appointment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T08:27:42.268+02:00  INFO 13132 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T08:27:42.269+02:00  INFO 13132 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-25T08:27:42.307+02:00  INFO 13132 --- [Appointment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T08:27:42.307+02:00  INFO 13132 --- [Appointment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 970 ms
+2024-09-25T08:27:42.394+02:00  INFO 13132 --- [Appointment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T08:27:42.457+02:00  INFO 13132 --- [Appointment] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-25T08:27:42.498+02:00  INFO 13132 --- [Appointment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T08:27:42.751+02:00  INFO 13132 --- [Appointment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T08:27:42.774+02:00  INFO 13132 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T08:27:42.834+02:00  INFO 13132 --- [Appointment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3478fab1
+2024-09-25T08:27:42.835+02:00  INFO 13132 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T08:27:43.783+02:00  INFO 13132 --- [Appointment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T08:27:43.817+02:00 DEBUG 13132 --- [Appointment] [restartedMain] org.hibernate.SQL                        : 
+    create table refresh_token (
+        id bigint not null,
+        expiry_date timestamp(6) with time zone not null,
+        token varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    )
+2024-09-25T08:27:43.858+02:00 DEBUG 13132 --- [Appointment] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists refresh_token 
+       drop constraint if exists UKr4k4edos30bx9neoq81mdvwph
+2024-09-25T08:27:43.861+02:00  WARN 13132 --- [Appointment] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2024-09-25T08:27:43.861+02:00  WARN 13132 --- [Appointment] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "ukr4k4edos30bx9neoq81mdvwph" of relation "refresh_token" does not exist, skipping
+2024-09-25T08:27:43.861+02:00 DEBUG 13132 --- [Appointment] [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists refresh_token 
+       add constraint UKr4k4edos30bx9neoq81mdvwph unique (token)
+2024-09-25T08:27:43.868+02:00 DEBUG 13132 --- [Appointment] [restartedMain] org.hibernate.SQL                        : 
+    create sequence refresh_token_seq start with 1 increment by 50
+2024-09-25T08:27:43.969+02:00  INFO 13132 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:27:44.189+02:00 ERROR 13132 --- [Appointment] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtRequestFilter' defined in file [E:\Projects\Appoinment\Appoinment\target\classes\project\appointment\security\JwtRequestFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+2024-09-25T08:27:44.206+02:00  INFO 13132 --- [Appointment] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T08:27:44.208+02:00  WARN 13132 --- [Appointment] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+2024-09-25T08:27:44.208+02:00  WARN 13132 --- [Appointment] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1674)
+ java.base@17.0.12/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+2024-09-25T08:27:44.209+02:00  WARN 13132 --- [Appointment] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T08:27:44.209+02:00  INFO 13132 --- [Appointment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T08:27:44.213+02:00  INFO 13132 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T08:27:44.214+02:00  INFO 13132 --- [Appointment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T08:27:44.221+02:00  INFO 13132 --- [Appointment] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T08:27:44.231+02:00 ERROR 13132 --- [Appointment] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at project.appointment.AppointmentApplication.main(AppointmentApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtRequestFilter' defined in file [E:\Projects\Appoinment\Appoinment\target\classes\project\appointment\security\JwtRequestFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4414) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.3.jar:3.3.3]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1439) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 59 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.access-token.expiration' in value "${jwt.access-token.expiration}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.1.12.jar:6.1.12]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:200) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:964) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1374) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.12.jar:6.1.12]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.1.12.jar:6.1.12]
+	... 71 common frames omitted
+

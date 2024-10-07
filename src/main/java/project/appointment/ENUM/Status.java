@@ -1,4 +1,4 @@
-package project.appointment.client.entity;
+package project.appointment.ENUM;
 
 public enum Status {
     ACTIVE,
