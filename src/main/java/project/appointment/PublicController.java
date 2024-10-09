@@ -18,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/public")
 @Slf4j
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class PublicController {
 
     private final ClientService clientService;

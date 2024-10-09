@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/admin")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class AdminController_new {
     private final AdminService adminService;
     private final SecurityService securityService;

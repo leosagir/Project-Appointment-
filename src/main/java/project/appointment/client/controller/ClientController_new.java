@@ -14,6 +14,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/clients")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class ClientController_new {
 
     private final ClientService clientService;

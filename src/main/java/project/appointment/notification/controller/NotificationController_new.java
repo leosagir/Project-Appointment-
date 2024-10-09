@@ -17,6 +17,7 @@ import java.util.List;
 @RequestMapping("/api/notifications")
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class NotificationController_new {
 
     private final NotificationService notificationService;

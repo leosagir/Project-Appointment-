@@ -17,6 +17,7 @@ import java.util.List;
     @RequestMapping("/api/admin")
     @PreAuthorize("hasRole('ADMINISTRATOR')")
     @RequiredArgsConstructor
+    @CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
     public class AdminClientController_new {
 
         private final ClientService clientService;

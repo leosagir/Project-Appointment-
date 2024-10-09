@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:3000")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class AuthController {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthController.class);

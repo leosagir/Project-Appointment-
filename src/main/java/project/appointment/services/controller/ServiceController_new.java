@@ -20,6 +20,7 @@ import java.util.List;
 @RequestMapping("/api/services")
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin(origins = "https://my-frontend-appointment-system-263c7cd07821.herokuapp.com")
 public class ServiceController_new {
 
         private final ServiceServiceImpl serviceService;
