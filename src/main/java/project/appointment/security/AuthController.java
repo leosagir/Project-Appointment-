@@ -10,6 +10,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
@@ -84,6 +85,29 @@ public class AuthController {
                     return ResponseEntity.status(HttpStatus.FORBIDDEN)
                             .body(Map.of("error", "Refresh token is not valid"));
                 });
+    }
+
+    @GetMapping("/user")
+    public ResponseEntity<?> getCurrentUser() {
+        logger.info("Attempting to get current user info");
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication != null && authentication.isAuthenticated()) {
+            AppUser appUser = (AppUser) authentication.getPrincipal();
+            Map<String, Object> response = new HashMap<>();
+            response.put("id", appUser.getId());
+            response.put("email", appUser.getEmail());
+            response.put("role", appUser.getRole());
+            response.put("authorities", appUser.getAuthorities().stream()
+                    .map(GrantedAuthority::getAuthority)
+                    .collect(Collectors.toList()));
+
+            logger.info("Current user info retrieved successfully for user: {}", appUser.getEmail());
+            return ResponseEntity.ok(response);
+        } else {
+            logger.warn("No authenticated user found");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("message", "No authenticated user found"));
+        }
     }
 
     @PostMapping("/logout")
